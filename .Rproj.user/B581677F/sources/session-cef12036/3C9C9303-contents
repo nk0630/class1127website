@@ -1,0 +1,35 @@
+---
+title: "first_vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{first_vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+### My first package
+
+My first R package is 1127
+
+### How to load it?
+```{r setup}
+library(Class1127)
+```
+
+
+### How to use it?
+```{r hello}
+hello()
+
+add(3,4)
+
+```
+
+

@@ -1,0 +1,26 @@
+pkgdown::build_site() #build_site is coming from pkgdown package
+#install.packages("pkgdown")
+#install.packages("httr2",type = binary)
+#install.packages("usethis")
+#install.packages("roxygen2")
+roxygen2::roxygenise()
+
+library(httr2)
+
+# Run once to configure package to use pkgdown
+usethis::use_pkgdown()
+
+# created README.md for Github landing page
+usethis::use_readme_md(open = FALSE)
+
+# creates LICENSE.md file
+usethis::use_mit_license("Neha")
+
+# creates NEWS.md file
+usethis::use_news_md(open = FALSE)
+
+# create a vignettes folder and vignettes/first_vignette.Rmd
+usethis::use_vignette("first_vignette")
+
+# create a vignettes/how_to_build_pkgdown_website.Rmd
+usethis::use_vignette("how_to_build_pkgdown_website")
